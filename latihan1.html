@@ -14,8 +14,8 @@
             const container = document.getElementById('root');
             const root = ReactDOM.createRoot(container);
 
-            function Button({operation, onClick}) {
-                return (<button onClick={onClick}>{ operation ? operation : "Reset!"}</button>);
+            function Button({operation, onClick, disabled}) {
+                return (<button onClick={onClick} disabled={disabled}>{ operation ? operation : "Reset!"}</button>);
             }
 
             function HomePage() {
@@ -36,10 +36,10 @@
                 return (
                     <>
                         <Button operation="+" onClick={addButton} />
-                        {number}
+                        {number >= 10 || number < 0 ? "done!" : number}
                         <Button operation="-" onClick={subButton} />
                         <br/>
-                        <Button onClick={resetButton} />
+                        <Button onClick={resetButton} disabled={number == 0} />
                     </>
                 );
             }
