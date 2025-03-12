@@ -15,14 +15,21 @@
             const root = ReactDOM.createRoot(container);
 
             function Header({name}) {
-                return (<h1>Belajar React Bersama {name ? name : "Yosia"} 🚀</h1>);
+                return (<h1>Belajar React Bersama {name ? name : "Evan"} 🚀</h1>);
             }
 
             function HomePage() {
+                const students = ['Yosia', 'Evan', 'Caren'];
                 return (
                     <>
-                        <Header />
-                        <Header name="Evan" />
+                        <Header name="Yosia" />
+                        <ul>
+                            {
+                                students.map((student) => (
+                                    <li>{student}</li>
+                                ))
+                            }
+                        </ul>
                     </>
                 );
             }
