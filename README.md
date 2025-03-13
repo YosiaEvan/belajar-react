@@ -13,3 +13,8 @@
   <li>Instalasi & Konfigurasi</li>
   <li>Game Tic Tac Toe</li>
 </ol>
+
+<h2>📗 Referensi</h2>
+<ul>
+  <li><a href="https://www.youtube.com/playlist?list=PLFIM0718LjIUu3X2zYNqomEWs3sYd-fV1">Belajar React untuk Pemula</a></li>
+</ul>
