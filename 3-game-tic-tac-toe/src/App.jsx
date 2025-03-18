@@ -20,6 +20,8 @@ function Board({xIsNext, squares, onPlay}) {
 
   if (winner) {
     status = 'Winner: ' + winner;
+  } else if (squares.every((square) => square !== null)) {
+    status = 'Game is a draw!';
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
@@ -80,6 +82,7 @@ export default function Game() {
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
       </div>
       <div className="game-info">
+        <h3>Time Travel</h3>
         <ol>{moves}</ol>
       </div>
     </div>
